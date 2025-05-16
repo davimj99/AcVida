@@ -1,0 +1,38 @@
+CREATE TABLE usuarios (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    email VARCHAR(100),
+    telefone VARCHAR(20),
+    relacionamento VARCHAR(50) -- exemplo: filha, neto, etc.
+);
+CREATE TABLE idosos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    idade INT,
+    genero VARCHAR(20),
+    necessidades TEXT,
+    usuario_id INT,
+    FOREIGN KEY (usuario_id) REFERENCES usuarios(id)
+);
+CREATE TABLE cuidadores (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    especializacao VARCHAR(100),
+    experiencia_anos INT,
+    telefone VARCHAR(20)
+);
+CREATE TABLE depoimentos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome_autor VARCHAR(100) NOT NULL,
+    relacionamento VARCHAR(50),
+    conteudo TEXT NOT NULL,
+    nota INT CHECK(nota BETWEEN 1 AND 5),
+    data_depoimento DATE DEFAULT CURRENT_DATE
+);
+CREATE TABLE contatos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    email VARCHAR(100),
+    mensagem TEXT NOT NULL,
+    data_envio DATETIME DEFAULT CURRENT_TIMESTAMP
+);

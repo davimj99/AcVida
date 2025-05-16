@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AC Vida - Cuidado que Complementa o Amor Familiar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+        
+        :root {
+            --primary: #3a86ff;
+            --secondary: #8338ec;
+            --accent: #ff006e;
+            --light: #f8f9fa;
+            --dark: #212529;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--dark);
+            scroll-behavior: smooth;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+        }
+        
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .btn-primary {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(58, 134, 255, 0.4);
+        }
+        
+        .btn-accent {
+            background: var(--accent);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-accent:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 0, 110, 0.4);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center text-white">
+                    <i class="fas fa-heart text-xl"></i>
+                </div>
+                <span class="text-xl font-bold text-blue-600">AC Vida</span>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#sobre" class="text-gray-700 hover:text-blue-600 transition">Sobre Nós</a>
+                <a href="#filosofia" class="text-gray-700 hover:text-blue-600 transition">Nossa Filosofia</a>
+                <a href="#familia" class="text-gray-700 hover:text-blue-600 transition">Para Familiares</a>
+                <a href="#depoimentos" class="text-gray-700 hover:text-blue-600 transition">Depoimentos</a>
+                <a href="#contato" class="text-gray-700 hover:text-blue-600 transition">Contato</a>
+            </nav>
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-gray-700 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-2 px-4 shadow-lg">
+            <a href="#sobre" class="block py-2 text-gray-700 hover:text-blue-600 transition">Sobre Nós</a>
+            <a href="#filosofia" class="block py-2 text-gray-700 hover:text-blue-600 transition">Nossa Filosofia</a>
+            <a href="#familia" class="block py-2 text-gray-700 hover:text-blue-600 transition">Para Familiares</a>
+            <a href="#depoimentos" class="block py-2 text-gray-700 hover:text-blue-600 transition">Depoimentos</a>
+            <a href="#contato" class="block py-2 text-gray-700 hover:text-blue-600 transition">Contato</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white py-20">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Cuidado que complementa o amor familiar</h1>
+                <p class="text-xl mb-8">Na AC Vida, acreditamos que o cuidado profissional é um complemento, nunca um substituto ao amor e à presença da família.</p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#contato" class="btn-primary text-white px-6 py-3 rounded-full font-medium text-center">Fale Conosco</a>
+                    <a href="#familia" class="bg-white text-blue-600 px-6 py-3 rounded-full font-medium text-center hover:bg-gray-100 transition">Para Familiares</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="https://images.unsplash.com/photo-1581056771107-24ca5f033842?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                     alt="Idoso sorrindo com cuidadora" 
+                     class="rounded-lg shadow-xl w-full max-w-md floating">
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Nós -->
+    <section id="sobre" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Sobre a AC Vida</h2>
+                <div class="w-20 h-1 bg-blue-500 mx-auto"></div>
+            </div>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <img src="https://images.unsplash.com/photo-1573497491208-6b1acb260507?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                         alt="Equipe de cuidadores" 
+                         class="rounded-lg shadow-lg w-full">
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-bold mb-4">Nossa Missão</h3>
+                    <p class="text-gray-700 mb-6">Na AC Vida, o cuidado vai além da técnica - é construído com empatia, escuta e respeito às histórias de cada idoso e sua família.</p>
+                    <p class="text-gray-700 mb-6">Sabemos que nenhum profissional, por mais capacitado que seja, pode substituir o afeto, os gestos e as memórias compartilhadas entre familiares.</p>
+                    <p class="text-gray-700 mb-6">Nosso compromisso é oferecer um cuidado que acolhe, respeita e complementa esse vínculo tão único.</p>
+                    <div class="flex items-center space-x-4">
+                        <div class="bg-blue-100 p-4 rounded-full">
+                            <i class="fas fa-heartbeat text-blue-600 text-2xl"></i>
+                        </div>
+                        <div class="bg-blue-100 p-4 rounded-full">
+                            <i class="fas fa-hands-helping text-blue-600 text-2xl"></i>
+                        </div>
+                        <div class="bg-blue-100 p-4 rounded-full">
+                            <i class="fas fa-home text-blue-600 text-2xl"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nossa Filosofia -->
+    <section id="filosofia" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Nossa Filosofia de Cuidado</h2>
+                <div class="w-20 h-1 bg-blue-500 mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-md text-center hover:shadow-lg transition">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-hand-holding-heart text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Complemento, não substituição</h3>
+                    <p class="text-gray-700">Nossos cuidadores estão aqui para complementar o amor da família, nunca para substituí-lo.</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md text-center hover:shadow-lg transition">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-users text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Família como parte da equipe</h3>
+                    <p class="text-gray-700">Valorizamos o envolvimento da família nas decisões e no acompanhamento do cuidado.</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md text-center hover:shadow-lg transition">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-heart text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Cuidado integral</h3>
+                    <p class="text-gray-700">Atendemos às necessidades físicas, emocionais e sociais, mantendo sempre o elo familiar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Para Familiares -->
+    <section id="familia" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Palavras de Apoio aos Familiares</h2>
+                <div class="w-20 h-1 bg-blue-500 mx-auto"></div>
+                <p class="text-xl mt-4 max-w-2xl mx-auto">Sabemos que confiar o cuidado de quem amamos a outra pessoa pode ser um desafio. Estamos aqui para apoiar você também.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <div class="bg-blue-50 p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4 text-blue-600">Mesmo longe, você pode estar presente</h3>
+                    <p class="text-gray-700 mb-6">Mesmo quando a presença física da família não é possível todos os dias, é possível estar presente de outras formas: por meio de palavras, vídeos, ligações ou gestos que demonstrem carinho.</p>
+                    <div class="flex space-x-4">
+                        <div class="bg-white p-3 rounded-full shadow">
+                            <i class="fas fa-video text-blue-600"></i>
+                        </div>
+                        <div class="bg-white p-3 rounded-full shadow">
+                            <i class="fas fa-phone text-blue-600"></i>
+                        </div>
+                        <div class="bg-white p-3 rounded-full shadow">
+                            <i class="fas fa-envelope text-blue-600"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-pink-50 p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4 text-pink-600">Você faz parte da equipe de cuidado</h3>
+                    <p class="text-gray-700 mb-6">Compartilhar informações sobre hábitos, gostos e rotina ajuda muito no bem-estar do idoso. Converse com o cuidador, pergunte, sugira, escute. Uma boa comunicação fortalece todos os lados.</p>
+                    <div class="flex space-x-4">
+                        <div class="bg-white p-3 rounded-full shadow">
+                            <i class="fas fa-comments text-pink-600"></i>
+                        </div>
+                        <div class="bg-white p-3 rounded-full shadow">
+                            <i class="fas fa-lightbulb text-pink-600"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-purple-50 p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4 text-purple-600">Cuide também de você</h3>
+                    <p class="text-gray-700 mb-6">Seu equilíbrio emocional faz parte do cuidado. Nós estamos aqui para apoiar você nessa jornada, oferecendo orientação, carinho e acolhimento.</p>
+                    <div class="flex space-x-4">
+                        <div class="bg-white p-3 rounded-full shadow">
+                            <i class="fas fa-heart text-purple-600"></i>
+                        </div>
+                        <div class="bg-white p-3 rounded-full shadow">
+                            <i class="fas fa-balance-scale text-purple-600"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-green-50 p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4 text-green-600">Manutenção do vínculo</h3>
+                    <p class="text-gray-700 mb-6">Nosso papel é garantir que o idoso receba atenção integral, sem que o elo com sua família se enfraqueça. Juntos, formamos uma rede de cuidado mais forte, mais afetiva e mais segura.</p>
+                    <div class="flex space-x-4">
+                        <div class="bg-white p-3 rounded-full shadow">
+                            <i class="fas fa-link text-green-600"></i>
+                        </div>
+                        <div class="bg-white p-3 rounded-full shadow">
+                            <i class="fas fa-hands text-green-600"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos -->
+    <section id="depoimentos" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Relatos que Inspiram</h2>
+                <div class="w-20 h-1 bg-blue-500 mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="testimonial-card bg-white p-8 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-quote-left text-blue-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Luciana R.</h4>
+                            <p class="text-gray-600 text-sm">Filha da Dona Célia</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic mb-4">"Moro em outro estado e tinha muito receio de deixar minha mãe com um cuidador. Mas a equipe da AC Vida foi além das expectativas. Recebo atualizações frequentes e vídeos dela sorrindo! Isso me traz paz."</p>
+                    <div class="flex">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white p-8 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-quote-left text-blue-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Roberto A.</h4>
+                            <p class="text-gray-600 text-sm">Filho do Sr. Francisco</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic mb-4">"A presença do cuidador fez toda a diferença, mas o carinho que ele teve em me envolver nas pequenas decisões do dia a dia foi essencial. Sentia que ainda cuidava do meu pai."</p>
+                    <div class="flex">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 bg-blue-600 text-white p-8 rounded-lg text-center">
+                <h3 class="text-2xl font-bold mb-4">Compartilhe sua experiência</h3>
+                <p class="mb-6 max-w-2xl mx-auto">Sua história pode acolher e inspirar outras famílias que estão passando por situações semelhantes.</p>
+                <a href="#contato" class="btn-accent text-white px-6 py-3 rounded-full font-medium inline-block">Envie seu relato</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Entre em Contato</h2>
+                <div class="w-20 h-1 bg-blue-500 mx-auto"></div>
+            </div>
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <h3 class="text-2xl font-bold mb-4">Fale Conosco</h3>
+                    <p class="text-gray-700 mb-6">Estamos aqui para responder suas dúvidas, ouvir suas histórias e ajudar no que for preciso.</p>
+                    
+                    <div class="mb-6 flex items-start">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-phone text-blue-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Telefone/WhatsApp</h4>
+                            <p class="text-gray-700">61 33492079</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6 flex items-start">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-envelope text-blue-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">E-mail</h4>
+                            <p class="text-gray-700">contato@acvida.com.br</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex space-x-4 mt-8">
+                        <a href="#" class="bg-blue-100 w-10 h-10 rounded-full flex items-center justify-center text-blue-600 hover:bg-blue-200 transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="bg-blue-100 w-10 h-10 rounded-full flex items-center justify-center text-blue-600 hover:bg-blue-200 transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="bg-blue-100 w-10 h-10 rounded-full flex items-center justify-center text-blue-600 hover:bg-blue-200 transition">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <form class="bg-gray-50 p-8 rounded-lg shadow-md">
+                        <div class="mb-4">
+                            <label for="name" class="block text-gray-700 mb-2">Nome</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-gray-700 mb-2">E-mail</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div class="mb-4">
+                            <label for="phone" class="block text-gray-700 mb-2">Telefone</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div class="mb-4">
+                            <label for="message" class="block text-gray-700 mb-2">Mensagem</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary text-white px-6 py-3 rounded-full font-medium w-full">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-8 md:mb-0">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center text-white">
+                            <i class="fas fa-heart text-xl"></i>
+                        </div>
+                        <span class="text-xl font-bold">AC Vida</span>
+                    </div>
+                    <p class="max-w-xs">Cuidado profissional que complementa o amor e a presença da família.</p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+                    <div>
+                        <h4 class="font-bold mb-4">Links</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#sobre" class="hover:text-blue-300 transition">Sobre Nós</a></li>
+                            <li><a href="#filosofia" class="hover:text-blue-300 transition">Nossa Filosofia</a></li>
+                            <li><a href="#familia" class="hover:text-blue-300 transition">Para Familiares</a></li>
+                            <li><a href="#depoimentos" class="hover:text-blue-300 transition">Depoimentos</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold mb-4">Contato</h4>
+                        <ul class="space-y-2">
+                            <li>61 33492079</li>
+                            <li>contato@acvida.com.br</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold mb-4">Redes Sociais</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="hover:text-blue-300 transition"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="hover:text-blue-300 transition"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="hover:text-blue-300 transition"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 AC Vida. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-blue-600 text-white w-12 h-12 rounded-full shadow-lg hidden">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Back to top button
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('hidden');
+            } else {
+                backToTopButton.classList.add('hidden');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
